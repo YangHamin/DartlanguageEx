@@ -1,35 +1,30 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:mynephew/landingpage.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'first app',
-      theme: ThemeData(primarySwatch: Colors.green),
-      home: (MyHomePage),
+      home: LandingPage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class LandingPage extends StatelessWidget {
+  _LandingPageState createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('first app'),
-      ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Text("hello"),
-            Text("hello"),
-            Text("hello"),
-          ],
-        ),
+      body: Container(
+        color: Colors.green,
+        child: Center(child: const Text("FRESH")),
       ),
     );
   }
